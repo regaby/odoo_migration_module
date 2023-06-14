@@ -126,7 +126,22 @@
             <field name="res_model">migration.record</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem id="menu_migration" name="Migration Module" parent="base.menu_custom" action="action_migration_menu"/>
-        <menuitem id="menu_migration_record" name="Migration Record" parent="base.menu_custom" action="action_migration_record_menu"/>
+        <menuitem
+            id="menu_migration_main"
+            name="Migration"
+            parent="base.menu_administration"
+            sequence="10"/>
+        <menuitem
+            id="menu_migration"
+            name="Migration Module"
+            parent="menu_migration_main"
+            action="action_migration_menu"
+        />
+        <menuitem
+            id="menu_migration_record"
+            name="Migration Record"
+            parent="menu_migration_main"
+            action="action_migration_record_menu"
+        />
     </data>
 </odoo>
